@@ -1,0 +1,25 @@
+<div class="project">
+  <h2 class="my-special-animation">{{project.name}}</h2>
+
+  <div ng-show="project.assignee">
+    <h3 class="project_assignee">Project owned by {{project.assignee.name}}</h3>
+    <img ng-src="{{project.assignee.photo}}" />
+  </div>
+
+  <div ng-show="!project.assignee">
+    <h3 class="project_assignee">Project not assigned to anyone</h3>
+  </div>
+
+  <div class="project_task_count">{{project.task_count}} open tasks</div>
+  <h3>Milestones</h3>
+  <ul>
+    <li ng-repeat="milestone in project.milestones | orderBy:due">
+      {{milestone.name}} due in {{milestone.due | date:'MM/dd/yyyy'}} (5 days) and 
+      <span ng-show="milestone.assignee">owned by {{milestone.assignee.name}}</span>
+
+      <span ng-show="! milestone.assignee">not owned by anyone</span>
+      
+    </li> 
+  </ul>
+</li>
+

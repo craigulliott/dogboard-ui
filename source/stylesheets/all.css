@@ -1,0 +1,46 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background: #FEFEFE;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #222;
+}
+
+header {
+  background-color: black;
+}
+
+h1 {
+    color: #ddd;
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    padding: 0;
+    margin: 0;
+    height: 116px;
+    line-height: 116px;
+}
+
+a:link, a:visited, a:active, a:hover {
+  color: #222222;
+}
+
+/* starting animations */
+h2.my-special-animation {
+  -webkit-transition: 1s linear all; /* Safari/Chrome */
+  -moz-transition: 1s linear all; /* Firefox */
+  -o-transition: 1s linear all; /* Opera */
+  transition: 1s linear all; /* IE10+ and Future Browsers */
+}
+
+h2.my-special-animation.ng-enter, h2.my-special-animation.ng-leave.ng-leave-active {
+  background:red;
+}
+
+h2.my-special-animation.ng-leave, h2.my-special-animation.ng-enter.ng-enter-active {
+  background:blue;
+}
